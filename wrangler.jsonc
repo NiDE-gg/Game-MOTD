@@ -8,6 +8,8 @@
   ],
   // Needed for the per-PR Previews on *.workers.dev
   "preview_urls": true,
+  // Preview-only overrides (none needed for static assets)
+  "previews": {},
   // Static-only Worker: no script, everything is served from ./public
   "assets": {
     "directory": "./public",
