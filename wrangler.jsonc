@@ -2,6 +2,14 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "game-motd",
   "compatibility_date": "2026-09-01",
+  // Production domain, attached (with its DNS record) on every `wrangler deploy`
+  "routes": [
+    { "pattern": "motd.nide.gg", "custom_domain": true }
+  ],
+  // Needed for the per-PR Previews on *.workers.dev
+  "preview_urls": true,
+  // Preview-only overrides (none needed for static assets)
+  "previews": {},
   // Static-only Worker: no script, everything is served from ./public
   "assets": {
     "directory": "./public",
