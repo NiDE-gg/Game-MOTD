@@ -1,0 +1,3 @@
+# Keep the legacy PHP URLs working (game server configs point to them)
+/css_ze/index.php  /css_ze/  301
+/css_zr/index.php  /css_zr/  301
