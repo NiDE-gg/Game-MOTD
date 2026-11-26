@@ -7,12 +7,12 @@
 # URL, rewritten (200, same URL for the browser) to the current season's file.
 # Season switch = edit the target folder below (winter <-> classic) and merge;
 # sites follow within the 5 min cache of _headers, without being redeployed.
-# Logos without a winter file stay on classic all year.
+# Every logo has both variants; a new logo without a winter file points at classic/.
 /assets/logos/forums.png       /assets/logos/winter/forums.png       200
 /assets/logos/sourcebans.png   /assets/logos/winter/sourcebans.png   200
 /assets/logos/ebans.png        /assets/logos/winter/ebans.png        200
 /assets/logos/kbans.png        /assets/logos/winter/kbans.png        200
 /assets/logos/donate.png       /assets/logos/winter/donate.png       200
 /assets/logos/demos.png        /assets/logos/winter/demos.png        200
-/assets/logos/demos-small.png  /assets/logos/classic/demos-small.png 200
+/assets/logos/demos-small.png  /assets/logos/winter/demos-small.png  200
 /assets/logos/rankings.png     /assets/logos/winter/rankings.png     200
