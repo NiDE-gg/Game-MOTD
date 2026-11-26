@@ -44,7 +44,7 @@ The old `/css_*/index.php` URLs redirect to the new paths, so existing server co
 | `demos-small` | `https://motd.nide.gg/assets/logos/demos-small.png` | |
 | `rankings` | `https://motd.nide.gg/assets/logos/rankings.png` | stats.nide.gg |
 
-`public/_redirects` rewrites each stable URL (status 200, the browser keeps the same URL) to `classic/<name>.png` or `winter/<name>.png`. To switch season, change the target folder of the relevant lines and merge: every site follows within the 5-minute cache set in `_headers`, with no redeploy on their side. A logo with no winter file (`demos-small`) stays on `classic/`; to give it one, add `winter/<name>.png` and repoint its line.
+`public/_redirects` rewrites each stable URL (status 200, the browser keeps the same URL) to `classic/<name>.png` or `winter/<name>.png`. To switch season, change the target folder of the relevant lines and merge: every site follows within the 5-minute cache set in `_headers`, with no redeploy on their side. Every logo has a classic and a winter file; a new logo without a winter file points at `classic/` until one is added.
 
 Keep both variants of a logo the same size, so the sites' layout does not move when the season changes.
 
