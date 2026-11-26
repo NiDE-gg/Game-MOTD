@@ -29,6 +29,25 @@ To add a new MOTD, create `public/<game>_<mode>/index.html` (plus its CSS/images
 
 The old `/css_*/index.php` URLs redirect to the new paths, so existing server configs keep working.
 
+## Shared logos
+
+`public/assets/logos/` is the single source of the NiDE banners used by the other sites (forum, bans, donate, demos, stats). Each site links a **stable** URL, never a seasonal file:
+
+| Logo | Stable URL | Used by |
+|------|------------|---------|
+| `forums` | `https://motd.nide.gg/assets/logos/forums.png` | forum, these MOTD pages |
+| `sourcebans` | `https://motd.nide.gg/assets/logos/sourcebans.png` | bans.nide.gg |
+| `ebans` | `https://motd.nide.gg/assets/logos/ebans.png` | (EBans tab of bans.nide.gg) |
+| `kbans` | `https://motd.nide.gg/assets/logos/kbans.png` | (KBans tab of bans.nide.gg) |
+| `donate` | `https://motd.nide.gg/assets/logos/donate.png` | donate.nide.gg |
+| `demos` | `https://motd.nide.gg/assets/logos/demos.png` | demos.nide.gg |
+| `demos-small` | `https://motd.nide.gg/assets/logos/demos-small.png` | |
+| `rankings` | `https://motd.nide.gg/assets/logos/rankings.png` | stats.nide.gg |
+
+`public/_redirects` rewrites each stable URL (status 200, the browser keeps the same URL) to `classic/<name>.png` or `winter/<name>.png`. To switch season, change the target folder of the relevant lines and merge: every site follows within the 5-minute cache set in `_headers`, with no redeploy on their side. A logo with no winter file (`demos-small`, `rankings`) stays on `classic/`; to give it one, add `winter/<name>.png` and repoint its line.
+
+Keep both variants of a logo the same size, so the sites' layout does not move when the season changes.
+
 ## Local preview
 
 ```sh
