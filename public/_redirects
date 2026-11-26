@@ -2,3 +2,17 @@
 /css_ze/index.php  /css_ze/  301
 /css_zr/index.php  /css_zr/  301
 /css_gg/index.php  /css_gg/  301
+
+# Shared site logos: every NiDE site links the stable /assets/logos/<name>.png
+# URL, rewritten (200, same URL for the browser) to the current season's file.
+# Season switch = edit the target folder below (winter <-> classic) and merge;
+# sites follow within the 5 min cache of _headers, without being redeployed.
+# Logos without a winter file stay on classic all year.
+/assets/logos/forums.png       /assets/logos/winter/forums.png       200
+/assets/logos/sourcebans.png   /assets/logos/winter/sourcebans.png   200
+/assets/logos/ebans.png        /assets/logos/winter/ebans.png        200
+/assets/logos/kbans.png        /assets/logos/winter/kbans.png        200
+/assets/logos/donate.png       /assets/logos/winter/donate.png       200
+/assets/logos/demos.png        /assets/logos/winter/demos.png        200
+/assets/logos/demos-small.png  /assets/logos/classic/demos-small.png 200
+/assets/logos/rankings.png     /assets/logos/classic/rankings.png    200

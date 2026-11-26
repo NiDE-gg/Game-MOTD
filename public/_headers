@@ -1,3 +1,7 @@
 /*
   X-Content-Type-Options: nosniff
   Cache-Control: public, max-age=300
+
+# Logos are embedded by the other NiDE sites (bans, donate, demos, stats, forum)
+/assets/*
+  Access-Control-Allow-Origin: *
